@@ -1,0 +1,37 @@
+<div ng-controller="ArticlesCategoryCtrl">
+  <div class="oversized-heading" ng-class="{'color-hawks': tag[0].name == 'Atlanta Hawks', 'color-celtics': tag[0].name == 'Boston Celtics', 'color-nets': tag[0].name == 'Brooklyn Nets', 'color-hornets': tag[0].name == 'Charlotte Hornets', 'color-bulls': tag[0].name == 'Chicago Bulls', 'color-cavs': tag[0].name == 'Cleveland Cavaliers', 'color-mavs': tag[0].name == 'Dallas Mavericks', 'color-nuggets': tag[0].name == 'Denver Nuggets', 'color-pistons': tag[0].name == 'Detroit Pistons', 'color-warriors': tag[0].name == 'Golden State Warriors', 'color-rockets': tag[0].name == 'Houston Rockets', 'color-pacers': tag[0].name == 'Indiana Pacers', 'color-clips': tag[0].name == 'Los Angeles Clippers', 'color-lakers': tag[0].name == 'Los Angeles Lakers', 'color-grizzlies': tag[0].name == 'Memphis Grizzlies', 'color-heat': tag[0].name == 'Miami Heat', 'color-bucks': tag[0].name == 'Milwaukee Bucks', 'color-twolves': tag[0].name == 'Minnesota Timberwolves', 'color-pelicans': tag[0].name == 'New Orleans Pelicans', 'color-knicks': tag[0].name == 'New York Knicks', 'color-thunder': tag[0].name == 'Oklahoma City Thunder', 'color-magic': tag[0].name == 'Orlando Magic', 'color-sixers': tag[0].name == 'Philadelphia 76ers', 'color-suns': tag[0].name == 'Phoenix Suns', 'color-blazers': tag[0].name == 'Portland Trail Blazers', 'color-kings': tag[0].name == 'Sacramento Kings', 'color-spurs': tag[0].name == 'San Antonio Spurs', 'color-raptors': tag[0].name == 'Toronto Raptors', 'color-jazz': tag[0].name == 'Utah Jazz', 'color-wizards': tag[0].name == 'Washington Wizards'}">
+
+    <div class="md-flex">
+      <div class="w-10 mt4 ml4">
+        <div class="cb__image">
+          <img ng-src={{category.image}}>
+        </div>
+      </div>
+      <div class="w-md-66 w-100">
+        <div class="cb__title pb1">
+          <h1 class="mt1">{{category}}</h1>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="news pb2">
+    <div class="wrapper grid">
+      <div class="md-flex">
+        <div class="flex w-md-100">
+          <div ng-repeat="article in cat_articles.slice().reverse() | limitTo: 3" class="w-md-50 w-100 mr2">
+            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
+              <div class="grid__content">
+                <p class="h6 category-marker">{{article.category}}</p>
+                <a ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
+                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

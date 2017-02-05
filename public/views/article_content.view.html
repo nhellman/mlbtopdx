@@ -1,0 +1,63 @@
+<div ng-controller="ArticlesSlugCtrl">
+    <div class="crop-height-article" ng-style="{'background-image': 'url('+ article[0].image + ')'}"></div>
+    <p class="credit">{{article[0].credit}}</p>
+    <h3 class="article-marker bg-red text-white px1 my0">
+      {{article[0].category}}
+    </h3>
+    <div class="md-flex flex justify-center">
+      <div class="article w-80 text-center">
+        <h1 class="headline sans">{{article[0].title}}</h1>
+        <p>{{article[0].blurb}}</p>
+        <div class="post-info text-center">
+          <p class="small-sans">
+          <a class="author" href="/articles/author/{{article[0].author}}">{{article[0].author}}</a> |
+          <span ng-bind="article[0].date | date: 'fullDate'" ng-bind="article[0].date | date: 'h:mma'"></span>
+        </p>
+        </div>
+        <hr>
+      </div>
+    </div>
+      <div class="md-flex flex justify-center">
+        <div class="article w-66">
+          <p ng-bind-html="article[0].body"></p>
+          <div class="tag" ng-repeat="tag in tags" ng-if="article[0].tag[$index].name"><span class="label label-info"><a href="/tags/details/{{article[0].tag[$index].name}}">{{article[0].tag[$index].name}}</a></span></div>
+
+          <div class="bg-blue more-content">
+            <div class="cb__title mb0 pt2 pb1">
+              <h2 class="text-white">More {{article[0].category}} Content</h2>
+            </div>
+
+              <div class="grid flex flex-wrap wrapper menu__features aftercontent_cards pb4">
+
+                <div class="content-list-item" ng-repeat="articleModule in articleModule.slice().reverse() | limitTo: 3" ng-if="article[0]._id != articleModule._id && article[0].category == articleModule.category">
+
+                  <div class="card flex" ng-style="{'background-image': 'url('+ articleModule.image + ')'}">
+
+                    <div class="card__content self-end news">
+                      <h2><a class="text-white" href="/{{articleModule.type}}/{{articleModule.category}}/{{articleModule.slug}}">{{articleModule.title}}</a></h2>
+                    </div>
+
+                    <div class="card__hover">
+                      <a class="btn btn-gray w-100" ng-href="/{{articleModule.type}}/{{articleModule.category}}/{{articleModule.slug}}">Read Story</a>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+          </div>
+
+          <hr>
+
+          <div class="comment-box">
+            <h3 class="capped">Comments on <span class="bold">{{article[0].title}}</span>:</h3>
+            <div class="row">
+              <dir-disqus config="disqusConfig"></dir-disqus>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>

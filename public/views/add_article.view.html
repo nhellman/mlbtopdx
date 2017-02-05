@@ -1,0 +1,68 @@
+<div ng-controller="ArticleCreateCtrl">
+  <div class="wrapper backend">
+    <div class="cb__title pb1">
+      <h1 class="mt1">Add Article</h1>
+    </div>
+    <form ng-submit="addArticle()">
+      <div class="form-input">
+        <label>Headline</label>
+        <input type="text" ng-model="title" name="title" placeholder="Enter Headline">
+      </div>
+      <div class="form-input">
+        <label>Blurb</label>
+        <input type="text" ng-model="blurb" name="blurb" placeholder="Enter blurb">
+      </div>
+      <div class="form-input">
+        <label>Author</label>
+        <select ng-model="author" name="author">
+          <option ng-repeat="author in authors" value="{{author.name}}">{{author.name}}</option>
+        </select>
+      </div>
+      <div class="form-input">
+        <label>Image</label>
+        <input type="text" ng-model="image" name="image" placeholder="Enter Image URL">
+        <img ng-src="{{image}}">
+      </div>
+      <div class="form-input">
+        <label>Credit</label>
+        <input type="text" class="form-control" ng-model="credit" name="credit" placeholder="Enter Credit">
+      </div>
+      <div class="form-input">
+        <label>Category</label>
+        <select ng-model="category" name="category">
+          <option ng-repeat="category in categories" value="{{category.name}}">{{category.name}}</option>
+        </select>
+      </div>
+      <div class="form-input">
+        <label>Type</label>
+        <select ng-model="type" name="type">
+          <option ng-repeat="type in types" value="{{type.name}}">{{type.name}}</option>
+        </select>
+      </div>
+      <div class="form-input">
+        <label>Body</label>
+        <text-angular ng-model="body" name="body" rows="10" placeholder="Enter Article Body"></text-angular>
+      </div>
+      <div class="form-input">
+        <label>Featured</label>
+        <select ng-model="featured" name="featured">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+    </div>
+      <div class="form-input">
+        <label>Tags</label>
+          <oi-select
+          oi-options="tag.name for tag in tags"
+          ng-model="tag"
+          multiple
+          oi-select-options="{
+              newItem: 'autocomplete'
+          }"
+          ></oi-select>
+      </div>
+      <button type="submit" class="btn mb1">Submit</button>
+      <a href="#/categories" class="btn mb1">Cancel</a>
+    </form>
+  </div>
+</div>

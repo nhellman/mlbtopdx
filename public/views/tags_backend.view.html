@@ -1,0 +1,35 @@
+<div ng-controller="TagCtrl">
+  <div class="wrapper backend">
+    <div class="grid">
+      <div class="cb__title pb1">
+        <h1 class="mt1">Tags</h1>
+      </div>
+      <div class="md-flex items-center justify-center">
+        <div class="flex">
+          <a href="/backend/tags" class="btn btn-transparent text-smooth mb4 mt0 pt0">Add Tag</a>
+        </div>
+      </div>
+  	    <div class="md-flex">
+  	      <div class="w-100">
+  	        <input type="search" class="form-input" ng-model="q" placeholder="Find Tags" aria-label="Find Tags">
+  	      </div>
+  	    </div>
+      </div>
+	  <div class="articles">
+	    <div ng-repeat="tag in tags.slice().reverse() | filter: q as results ">
+
+        <div class="cb cb3 mb2">
+          <div class="cb__image">
+            <img ng-src={{tag.image}}>
+          </div>
+          <div class="cb__text narrow-left text-center mr1">
+            <h4 class="mb1"><a href="/articles/author/{{author.name}}">{{tag.name}}</a></h4>
+            <p class="mb1 text-transform-upper"><b>Conference</b><br> {{tag.conference}}</p>
+            <p class="mb1"><b>Division</b><br> {{tag.division}}</p>
+            <a class="btn btn-default" href="/tags/edit/{{tag._id}}">Edit Tag</a>
+          </div>
+        </div>
+	    </div>
+	  </div>
+  </div>
+</div>

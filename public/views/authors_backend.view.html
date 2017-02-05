@@ -1,0 +1,35 @@
+<div ng-controller="AuthorCtrl">
+  <div class="wrapper backend">
+    <div class="cb__title pb1">
+      <h1 class="mt1">Authors</h1>
+    </div>
+    <div class="grid">
+      <div class="md-flex items-center justify-center">
+        <div class="flex">
+          <a href="/backend/authors" class="btn btn-transparent text-smooth mb4 mt0 pt0">Add Author</a>
+        </div>
+      </div>
+        <div class="md-flex">
+          <div class="w-100">
+            <input type="search" class="form-input" ng-model="q" placeholder="Find Authors" aria-label="Find Authors">
+          </div>
+        </div>
+      </div>
+    <div class="authors">
+      <div ng-repeat="author in authors.slice().reverse() | limitTo: 5 | filter: q as results ">
+
+        <div class="cb cb3 mb2">
+          <div class="cb__image">
+            <img ng-src={{author.image}}>
+          </div>
+          <div class="cb__text narrow-left text-center mr1">
+            <h4 class="mb1"><a href="/articles/author/{{author.name}}">{{author.name}}</a></h4>
+            <p ng-bind-html="author.bio" class="mb1"></p>
+            <p class="mb1">Joined: <span ng-bind="author.date | date: 'MM/dd/yyyy'"></span></p>
+            <a class="btn btn-default" href="/authors/edit/{{author._id}}">Edit Author</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

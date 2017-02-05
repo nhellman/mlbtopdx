@@ -1,0 +1,143 @@
+<div ng-controller="HomeCtrl">
+
+  <main class="news">
+    <div class="carousel carousel--food slider js_slider">
+      <div class="frame js_frame">
+        <ul rn-carousel rn-carousel-auto-slide="5" rn-carousel-easing class="slides js_slides image">
+          <li ng-repeat="article in articles.slice(0, articles.length).reverse() | limitTo: 5" class="js_slide">
+            <div class="slide-background-image" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+            <div class="slide-content">
+              <h3 class="category-marker">{{article.category}}</h3>
+              <a ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
+              <div class="slide-content__description ">
+                {{article.blurb}}
+              </div>
+              <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid wrapper bg-off-white">
+
+      <div class="md-flex">
+
+        <!-- SECOND LEVEL | ONE HALF AND TWO QUARTERS -->
+        <div class="flex w-md-50 ">
+          <div ng-repeat="article in articles.slice(0, articles.length - 5).reverse() | limitTo: 1">
+            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
+              <div class="grid__content">
+                <p class="h6 category-marker">{{article.category}}</p>
+                <a ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
+                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-md-50 ">
+          <div ng-repeat="article in articles.slice(0, articles.length - 6).reverse() | limitTo: 1">
+            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
+              <div class="grid__content">
+                <p class="h6 category-marker">{{article.category}}</p>
+                <a ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
+                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- THIRD LEVEL | THREE THIRDS -->
+      <div class="md-flex">
+
+        <div class="flex w-md-33">
+          <div ng-repeat="article in articles.slice(0, articles.length - 7).reverse() | limitTo: 1">
+            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
+              <div class="grid__content">
+                <p class="h6 category-marker">{{article.category}}</p>
+                <a ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
+                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-md-33">
+          <div ng-repeat="article in articles.slice(0, articles.length - 8).reverse() | limitTo: 1">
+            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
+              <div class="grid__content">
+                <p class="h6 category-marker">{{article.category}}</p>
+                <a ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
+                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-md-33">
+          <div ng-repeat="article in articles.slice(0, articles.length - 9).reverse() | limitTo: 1">
+            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
+              <div class="grid__content">
+                <p class="h6 category-marker">{{article.category}}</p>
+                <a ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
+                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOURTH LEVEL | THREE THIRDS -->
+      <div class="md-flex">
+
+        <div class="flex w-md-33">
+          <div ng-repeat="article in articles.slice(0, articles.length - 10).reverse() | limitTo: 1">
+            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
+              <div class="grid__content">
+                <p class="h6 category-marker">{{article.category}}</p>
+                <a ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
+                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-md-33">
+          <div ng-repeat="article in articles.slice(0, articles.length - 11).reverse() | limitTo: 1">
+            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
+              <div class="grid__content">
+                <p class="h6 category-marker">{{article.category}}</p>
+                <a ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
+                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-md-33">
+          <div ng-repeat="article in articles.slice(0, articles.length - 12).reverse() | limitTo: 1">
+            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
+              <div class="grid__content">
+                <p class="h6 category-marker">{{article.category}}</p>
+                <a ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
+                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+
+    </div>
+
+
+
+  </main>
+
+  </body>
+
+</div>

@@ -1,0 +1,50 @@
+<div ng-controller="TagEditCtrl">
+  <div class="wrapper backend">
+    <div class="cb__title pb1">
+      <h1 class="mt1">Edit Tag</h1>
+    </div>
+    <form ng-submit="updateTag()">
+      <div class="form-input">
+        <label>Name</label>
+        <input type="text" ng-model="tag.name" name="name" placeholder="Enter Name">
+      </div>
+      <div class="form-input">
+        <label>Image</label>
+        <input type="text" ng-model="tag.image" name="image" placeholder="Enter Image URL">
+        <img ng-src="{{tag.image}}">
+      </div>
+      <div class="form-input">
+        <label>Type</label>
+        <select class="form-control" ng-model="tag.type" name="type">
+          <option value="team">Team</option>
+          <option value="player">Player</option>
+          <option value="league">League</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-input">
+        <label>Conference</label>
+        <select class="form-control" ng-model="tag.conference" name="conference">
+          <option value="american">American</option>
+          <option value="national">National</option>
+          <option value="none">None</option>
+        </select>
+      </div>
+      <div class="form-input">
+        <label>Division</label>
+        <select class="form-control" ng-model="tag.division" name="division">
+          <option value="aleast">AL East</option>
+          <option value="alcentral">AL Central</option>
+          <option value="alwest">AL West</option>
+          <option value="nleast">NL East</option>
+          <option value="nlcentral">NL Central</option>
+          <option value="nlwest">NL West</option>
+          <option value="none">None</option>
+        </select>
+      </div>
+      <button type="submit" class="btn mb1">Submit</button>
+      <a href="#" class="btn mb1" ng-click="removeTag()">Delete</a>
+      <a href="/backend" class="btn mb1">Cancel</a>
+    </form>
+  </div>
+</div>

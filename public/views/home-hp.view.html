@@ -1,0 +1,424 @@
+<div ng-controller="HomeCtrl">
+
+  <main>
+    <div class="carousel carousel--food slider js_slider">
+      <div class="frame js_frame">
+        <ul rn-carousel rn-carousel-auto-slide="5" rn-carousel-easing class="slides js_slides image">
+          <li class="js_slide">
+            <div class="slide-background-image" style="background-image: url('images/stadium-blur.jpg')"></div>
+            <div class="slide-content">
+              <h2>You're up to bat, Portland</h2>
+              <div class="slide-content__description ">
+                Join the movement and help bring MLB to Portland.
+              </div>
+              <div id="carousel-counter">
+                <span>{{carouselIndex + 1}}</span> <span>/ 4</span>
+              </div>
+              <a href="/join" class="slide-content__cta btn btn-transparent btn-large">
+                <span class="btn-text-with-icon">Join Now</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+<path d="M31 16.16c0.002 0.027 0.003 0.058 0.003 0.090s-0.001 0.063-0.004 0.094c-0.052 0.169-0.134 0.319-0.241 0.448s0.002 0.098-0.068 0.138l-0.080 0.050-9.080 9.12c-0.234 0.235-0.557 0.381-0.915 0.381s-0.681-0.146-0.915-0.381c-0.233-0.236-0.378-0.561-0.378-0.92s0.144-0.684 0.378-0.92l6.93-7h-24.33c-0.724 0-1.31-0.587-1.31-1.31s0.587-1.31 1.31-1.31h24.27l-6.93-7c-0.233-0.236-0.377-0.561-0.377-0.92s0.144-0.684 0.378-0.92c0.234-0.235 0.557-0.381 0.915-0.381s0.681 0.146 0.915 0.381l9.080 9.2 0.090 0.060c0.232 0.232 0.375 0.552 0.375 0.905 0 0.069-0.005 0.136-0.016 0.202z"></path>
+</svg>
+              </a>
+            </div>
+          </li>
+          <li class="js_slide">
+            <div class="slide-background-image" style="background-image: url('images/portlandskyline-blur.jpg')"></div>
+            <div class="slide-content">
+              <h2>What a MLB team would do for Portland</h2>
+              <div class="slide-content__description ">
+                Our $10 off $35 deal pairs quality with value, so you can focus less on your wallet and more on what matters.
+              </div>
+              <div id="carousel-counter">
+                <span>{{carouselIndex + 1}}</span> <span>/ 4</span>
+              </div>
+              <a href="/whybaseball" class="slide-content__cta btn btn-transparent btn-large">
+                <span class="btn-text-with-icon">Find Out</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+<path d="M31 16.16c0.002 0.027 0.003 0.058 0.003 0.090s-0.001 0.063-0.004 0.094c-0.052 0.169-0.134 0.319-0.241 0.448s0.002 0.098-0.068 0.138l-0.080 0.050-9.080 9.12c-0.234 0.235-0.557 0.381-0.915 0.381s-0.681-0.146-0.915-0.381c-0.233-0.236-0.378-0.561-0.378-0.92s0.144-0.684 0.378-0.92l6.93-7h-24.33c-0.724 0-1.31-0.587-1.31-1.31s0.587-1.31 1.31-1.31h24.27l-6.93-7c-0.233-0.236-0.377-0.561-0.377-0.92s0.144-0.684 0.378-0.92c0.234-0.235 0.557-0.381 0.915-0.381s0.681 0.146 0.915 0.381l9.080 9.2 0.090 0.060c0.232 0.232 0.375 0.552 0.375 0.905 0 0.069-0.005 0.136-0.016 0.202z"></path>
+</svg>
+              </a>
+            </div>
+          </li>
+          <li class="js_slide">
+            <div class="slide-background-image" style="background-image: url('images/lillard-blur.jpg')"></div>
+            <div class="slide-content">
+              <h2>Why Portland Deserves another team</h2>
+              <div class="slide-content__description ">
+                Well, there are two teams if you count soccer.
+              </div>
+              <div id="carousel-counter">
+                <span>{{carouselIndex + 1}}</span> <span>/ 4</span>
+              </div>
+              <a href="/whyportland" class="slide-content__cta btn btn-transparent btn-large">
+                <span class="btn-text-with-icon">Read more </span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+<path d="M31 16.16c0.002 0.027 0.003 0.058 0.003 0.090s-0.001 0.063-0.004 0.094c-0.052 0.169-0.134 0.319-0.241 0.448s0.002 0.098-0.068 0.138l-0.080 0.050-9.080 9.12c-0.234 0.235-0.557 0.381-0.915 0.381s-0.681-0.146-0.915-0.381c-0.233-0.236-0.378-0.561-0.378-0.92s0.144-0.684 0.378-0.92l6.93-7h-24.33c-0.724 0-1.31-0.587-1.31-1.31s0.587-1.31 1.31-1.31h24.27l-6.93-7c-0.233-0.236-0.377-0.561-0.377-0.92s0.144-0.684 0.378-0.92c0.234-0.235 0.557-0.381 0.915-0.381s0.681 0.146 0.915 0.381l9.080 9.2 0.090 0.060c0.232 0.232 0.375 0.552 0.375 0.905 0 0.069-0.005 0.136-0.016 0.202z"></path>
+</svg>
+              </a>
+            </div>
+          </li>
+          <li class="js_slide">
+            <div class="slide-background-image" style="background-image: url('images/support.jpg')"></div>
+            <div class="slide-content">
+              <h2>Portland Needs You to Make a difference</h2>
+              <div class="slide-content__description ">
+                Join the movement and help bring MLB to Portland.
+              </div>
+              <div id="carousel-counter">
+                <span>{{carouselIndex + 1}}</span> <span>/ 4</span>
+              </div>
+              <a href="/join" class="slide-content__cta btn btn-transparent btn-large">
+                <span class="btn-text-with-icon">Join Now </span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+<path d="M31 16.16c0.002 0.027 0.003 0.058 0.003 0.090s-0.001 0.063-0.004 0.094c-0.052 0.169-0.134 0.319-0.241 0.448s0.002 0.098-0.068 0.138l-0.080 0.050-9.080 9.12c-0.234 0.235-0.557 0.381-0.915 0.381s-0.681-0.146-0.915-0.381c-0.233-0.236-0.378-0.561-0.378-0.92s0.144-0.684 0.378-0.92l6.93-7h-24.33c-0.724 0-1.31-0.587-1.31-1.31s0.587-1.31 1.31-1.31h24.27l-6.93-7c-0.233-0.236-0.377-0.561-0.377-0.92s0.144-0.684 0.378-0.92c0.234-0.235 0.557-0.381 0.915-0.381s0.681 0.146 0.915 0.381l9.080 9.2 0.090 0.060c0.232 0.232 0.375 0.552 0.375 0.905 0 0.069-0.005 0.136-0.016 0.202z"></path>
+</svg>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="account account--page bg-off-white">
+      <div class="wrapper">
+        <div class="cb__title mb1 pb1">
+          <h2 class="mt0">Bring MLB to Porland</h2>
+          <p>Keep tabs on the baseball to Portland movement.</p>
+        </div>
+        <div class="md-flex">
+          <div class="bg-white w-md-50 w-100">
+            <h3>Sign Up</h3>
+            <form name="form" method="post" role="form" ng-submit="form.$valid && sendMessage(input)" novalidate>
+              <p ng-show="success">Thanks for getting in touch!</p>
+              <p ng-show="error">Something wrong happened!, please try again.</p>
+              <div class="form-input">
+                <label for="firstname">First Name</label>
+                <input ng-model="input.firstname" type="text" placeholder="First Name" id="firstname" name="firstname" required>
+              </div>
+              <div class="form-input">
+                <label for="lastname">Last Name</label>
+                <input ng-model="input.lastname" type="text" placeholder="Last Name" id="lastname" name="lastname" required>
+              </div>
+              <div class="form-input">
+                <label for="email">Email Address</label>
+                <input ng-model="input.email" type="text" placeholder="email@example.com" id="email" name="email" required>
+              </div>
+              <div class="form-input">
+                <label for="phone">Phone:</label>
+                <input ng-model="input.phone" type="usrtel" placeholder="(503) 555-5555" id="phone" name="phone" required>
+              </div>
+              <div class="text-right">
+                <button class="btn"  type="submit" name="submit" value="submit">Join the Movement</button>
+              </div>
+            </form>
+            <p ng-class="result">{{ resultMessage }}</p>
+          </div>
+          <div class="bg-white w-md-50 w-100">
+            <h3>Sign the petition</h3>
+            <p>Don't have a Premier Rewards account yet? Worry not; you can create one right now!</p>
+            <a class="btn btn--full" href="#">Sign Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="md-flex">
+
+        <!-- First large left card -->
+        <div class="flex w-md-50 ">
+          <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" style="background: url('images/baseballseats.jpeg') no-repeat center center/cover">
+            <div class="grid__content">
+              <p class="h6">Bring MLB to Portland</p>
+              <h2>Latest News</h2>
+              <a href="/news" class="btn btn-transparent text-smooth">See Stories</a>
+            </div>
+          </div>
+        </div>
+        <!-- End first large 50% area -->
+
+        <!-- Second large 50% area, flex column on desktop -->
+        <div class="md-flex w-md-50 flex-column">
+          <!-- First card spans 100% -->
+          <div class="flex items-center w-100 grid__item bg-blue" style="background: url('images/PioneerSQBackground.jpg') no-repeat center center/cover">
+            <div class="grid__content w-100 w-lg-75">
+              <p class="h6">The Rose City vs. Cities With More Sports Teams</p>
+              <h2>How We Stack up</h2>
+              <a href="/whyportland" class="btn btn-transparent text-dark text-smooth">Find Out</a>
+            </div>
+            <img class="desktop-only" src="">
+          </div>
+
+          <!-- Second is a flex-container on desktop that holds two 50% width cards -->
+          <div class="md-flex">
+            <div class="flex items-end w-md-100 grid__item text-white gradient-after" style="background: url('images/workers.jpg') no-repeat center center/cover">
+              <div class="grid__content grid__content--text-small">
+                <h2 class="text-white">Why a team will boost Portland's economy</h2>
+                <a href="/whybaseball" class="btn btn-transparent text-smooth">See More</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Ends second large 50% area -->
+
+      </div>
+    </div>
+
+
+
+    <div class="bg-red">
+      <div class="cb__title text-white pb1 mb1">
+        <h2>Why Portland Needs Baseball</h2>
+        <p>Keep tabs on the baseball to Portland movement.</p>
+      </div>
+      <div class="grid grid__menu flex flex-wrap wrapper menu__features">
+
+        <div class="card flex" style="background-image: url('images/cash.jpg')">
+          <div class="card__content self-end">
+            <h2>Helps Local Economy</h2>
+          </div>
+          <div class="card__hover">
+            <h5 class="w-80 card__content">Order Online Order Online Order Online Order Online Order Online Order Online Order Online Order Online</h5>
+          </div>
+        </div>
+        <div class="card flex" style="background-image: url('images/planesky.jpg')">
+
+          <div class="card__content self-end">
+            <h2>Boosts Tourism</h2>
+          </div>
+          <div class="card__hover">
+            <h5 class="w-80 card__content">Order Online Order Online Order Online Order Online Order Online Order Online Order Online Order Online</h5>
+          </div>
+        </div>
+        <div class="card flex" style="background-image: url('images/baseball-fans.jpg')">
+
+          <div class="card__content self-end">
+            <h2>More Entertainment Options</h2>
+          </div>
+          <div class="card__hover">
+            <h5 class="w-80 card__content">Order Online Order Online Order Online Order Online Order Online Order Online Order Online Order Online</h5>
+          </div>
+        </div>
+        <div class="card flex" style="background-image: url('images/construction.jpg')">
+          <div class="card__content self-end">
+            <h2>Creates Jobs</h2>
+          </div>
+          <div class="card__hover">
+            <h5 class="w-80 card__content">Order Online Order Online Order Online Order Online Order Online Order Online Order Online Order Online</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="headtohead" class="bg-off-white">
+
+      <div class="cb__title pb0">
+        <h2>Head-to-Head Battle</h2>
+        <h5 class="mt0">How Portland stacks up against peer sports cities.</h5>
+      </div>
+
+      <div class="cb cb3">
+        <div class="cb__image">
+          <img src="images/streetcar.jpg" alt="">
+        </div>
+        <div class="cb__text narrow-left text-center">
+          <h3 class="bg-red text-white mt0 mb1">Portland</h3>
+          <h4 class="my0"><span
+              counter value="autoStartVarPDX"
+                  to="22">
+                {{ autoStartVarPDX | number:0 }}</span>nd ranked</h4>
+          <h5 class="text-red mt0 mb1">TV Market</h5>
+
+          <h4 class="my0"><span class="decimal-count fadeIn">2.4</span> Million</h4>
+          <h5 class="text-red mt0 mb1">Metro Population</h5>
+
+          <h4 class="my0">Top <span>20</span></h4>
+          <h5 class="text-red mt0 mb1">Fastest Growing City</h5>
+
+          <h4 class="my0">Teams:</h4>
+
+          <div class="md-flex">
+
+            <div class="flex items-center justify-center">
+              <div class="w-md-50">
+                <img src="images/blazers.png" alt="Portland Trail Blazers" />
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center">
+              <div class="w-md-50">
+                <img src="images/portland-timbers-logo.png" alt="Portland Timbers" />
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="cb cb3 mt3">
+        <div class="cb__image">
+          <img src="images/kansascity.jpg" alt="">
+        </div>
+        <div class="cb__text narrow-left text-center">
+          <h3 class="bg-royal-blue text-white mt0 mb1">Kansas City</h3>
+          <h4 class="my0"><span
+            counter value="autoStartVarKC"
+                to="31">
+              {{ autoStartVarKC | number:0 }}</span>st ranked</h4>
+          <h5 class="text-red mt0 mb1">TV Market</h5>
+
+          <h4 class="my0"><span class="decimal-count fadeIn">2</span> Million</h4>
+          <h5 class="text-red mt0 mb1">Metro Population</h5>
+
+          <h4 class="my0">Teams:</h4>
+
+          <div class="md-flex">
+
+            <div class="flex items-center justify-center">
+              <div class="w-md-80">
+                <img src="images/kcroyals.png" alt="Kansas City Royals">
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center">
+              <div class="w-md-80">
+                <img src="images/kcchiefs.png" alt="Kansas City Chiefs">
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center">
+              <div class="w-md-80">
+                <img src="images/sportingkc.png" alt="Sporting Kansas City">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="cb cb3 mt3">
+        <div class="cb__image">
+          <img src="images/pittsburgh.jpg" alt="">
+        </div>
+
+        <div class="cb__text narrow-left text-center">
+          <h3 class="bg-yellow text-white mt0 mb1">Pittsburgh</h3>
+          <h4 class="my0"><span
+              counter value="autoStartVarPitt"
+                  to="23">
+                {{ autoStartVarPitt | number:0 }}</span>rd ranked</h4>
+          <h5 class="text-red mt0 mb1">TV Market</h5>
+
+          <h4 class="my0"><span class="decimal-count fadeIn">2.35</span> Million</h4>
+          <h5 class="text-red mt0 mb1">Metro Population</h5>
+
+          <h4 class="my0">Teams:</h4>
+
+          <div class="md-flex">
+
+            <div class="flex items-center justify-center">
+              <div class="w-md-80">
+                <img src="images/pittsburghsteelers.png" alt="Pittsburgh Steelers">
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center">
+              <div class="w-md-80">
+                <img src="images/pittsburghpirates.png" alt="Pittsburgh Pirates">
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center">
+              <div class="w-md-80">
+                <img src="images/pittsburghpenguins.png" alt="Pittsburgh Penguins">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cb cb3 mt3">
+        <div class="cb__image">
+          <img src="images/buffalo.jpg" alt="">
+        </div>
+
+        <div class="cb__text narrow-left text-center">
+          <h3 class="bg-blue text-white mt0 mb1">Buffalo</h3>
+          <h4 class="my0"><span
+            counter value="autoStartVarBuff"
+                to="51">
+              {{ autoStartVarBuff | number:0 }}</span>st ranked</h4>
+          <h5 class="text-red mt0 mb1">TV Market</h5>
+
+          <h4 class="my0"><span class="decimal-count fadeIn">1.35</span> Million</h4>
+          <h5 class="text-red mt0 mb1">Metro Population</h5>
+
+          <h4 class="my0">Teams:</h4>
+
+          <div class="md-flex">
+
+            <div class="flex items-center justify-center">
+              <div class="w-md-50">
+                <img src="images/buffalobills.png" alt="Buffalo Bills">
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center">
+              <div class="w-md-50">
+                <img src="images/buffalosabres.png" alt="Buffalo Sabres">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cb__title pb0">
+        <h3 class="my0">Bigger Market, Larger Population and Fewer Teams</h3>
+        <h5 class="mt0">Is that really fair?</h5>
+      </div>
+
+    </div>
+
+
+    <div class="bg-blue news">
+      <div class="cb__title mb0 pt4 pb1">
+        <h2 class="text-white">Latest news</h2>
+        <p>Keep tabs on the baseball to Portland movement.</p>
+      </div>
+
+        <div class="grid wrapper">
+
+          <div class="md-flex mb2">
+
+            <div ng-repeat="article in articles.slice(0, articles.length).reverse() | limitTo: 3" class="w-md-33">
+                <div class="flex w-md-100 pr2 h-350">
+                  <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
+                    <div class="grid__content">
+                      <p class="h6 category-marker"><a ng-href="/articles/category/{{article.category}}">{{article.category}}</a></p>
+                      <a ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
+                      <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+        <div class="md-flex items-center justify-center">
+
+          <div class="flex">
+
+            <a href="/news" class="btn btn-transparent text-smooth mb4 mt0 pt0">see more</a>
+
+          </div>
+
+        </div>
+
+    </div>
+  </main>
+
+  </body>
+
+</div>

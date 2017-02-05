@@ -1,0 +1,938 @@
+/*GENERAL*/
+
+.container {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'oregonregular', sans-serif;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+}
+
+body {
+  background-color: transparent;
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+}
+
+.center-block {
+  float: none;
+}
+
+hr {
+  border: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/*FONTS*/
+
+.oregon {
+  font-family: 'oregonregular', sans-serif;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.roboto-slab {
+  font-family: 'Roboto Slab', serif;
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+/*FONTAWESOME*/
+
+.fa {
+  float: left;
+  margin-right: 10px;
+}
+
+.fa-3 {
+    font-size: 3.5em !important;
+}
+
+
+/*COLORS*/
+
+.red {
+  color: #D12024 !important;
+}
+
+.white {
+  color: #fff !important;
+}
+
+.gray {
+  color: #333333 !important;
+}
+
+.blue {
+  color: #263058 !important;
+}
+
+/*MARGINS*/
+
+.clearout-top {
+  margin-top: 200px;
+}
+
+.spacer-top {
+  margin-top: 150px;
+}
+
+.room-top {
+  margin-top: 100px;
+}
+
+.sliver-top {
+  margin-top: 50px;
+}
+
+.crack-top {
+  margin-top: 25px;
+}
+
+/*BUTTONS*/
+
+button, .role-button {
+  font-family: 'oregonregular', sans-serif;
+  text-transform: uppercase;
+  background-color: #D12024;
+  color: #fff;
+}
+
+a.role-button {
+  color: #fff;
+}
+
+button:hover {
+  color: #333333 !important;
+}
+
+.btn-mega {
+    padding: 14px 20px;
+    font-size: 21px;
+}
+
+/*SLIDES*/
+
+.slide {
+  background-size: cover;
+  background-repeat: no-repeat !important;
+  background-position: center;
+}
+
+/*SECTION-WIDE*/
+
+.section {
+  padding: 40px 15px;
+  min-height: 900px;
+  position: relative;
+}
+
+.section-content img {
+  width: 100%;
+}
+
+.section h2 {
+  font-size: 6rem;
+}
+
+.section h4 {
+  font-size: 4rem;
+  font-family: 'raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.section h5 {
+  font-size: 2.5rem;
+  font-family: 'raleway', sans-serif;
+  font-weight: 400;
+}
+
+.loud {
+  font-family: 'raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.loud-oregon {
+  font-family: 'oregonregular', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.soft {
+  font-family: 'raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 100 !important;
+}
+
+/*NAV*/
+
+.navbar {
+  padding: 0 20px;
+  border-radius: 0px;
+}
+
+.navbar-inverse .navbar-toggle {
+  background: #D12024;
+  border-color: #c2c2c2;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background: #c2c2c2;
+}
+
+/*.navbar li a {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+
+.navbar-brand {
+  height: 50px;
+  padding: 12px 15px;
+}*/
+
+.navbar-inverse {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/*.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: transparent;
+}
+
+.navbar-nav>.active>a {
+  padding-bottom: 2px;
+  border-bottom: solid 4px #263058;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+
+.nav>li>a {
+  padding: 0;
+}
+
+.nav>li>a.active {
+  color: #D12024;
+}
+
+.nav > li {
+  max-width: 180px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.nav > li > a:hover {
+  color: #D12024 !important;
+}
+
+.nav > li > p.blurb {
+  font-style: italic;
+  font-weight: 100;
+}
+
+.navbar-fixed-bottom {
+  position: absolute !important;
+  -webkit-transition: all 0.30s linear 0s;
+  transition: all 0.30s linear 0s;
+}*/
+
+
+/*FIRST SECTION*/
+
+.first-section {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../images/stadium-blur.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 50px;
+  min-height: 400px;
+}
+
+.jumbo h1 {
+  font-size: 10rem;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+.jumbo p.blurb {
+  font-size: 2.3rem;
+  font-weight: 100;
+  padding: 20px 0 30px 0;
+  color: #fff;
+}
+
+.jumbo button {
+  padding: 12px 20px;
+}
+/*SECOND SECTION */
+
+.section-second {
+  background: #fff;
+  color: #000;
+}
+
+/*SECOND SECTION */
+
+.second-section {
+  color: #fff;
+  background: #fff;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/lillard.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/*THIRD SECTION */
+
+.third-section {
+  color: #fff;
+  background: #fff;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/timbers.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+/*FOURTH SECTION */
+
+.fourth-section {
+  color: #fff;
+  background: #fff;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/RiverBackground.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.fourth-section h2.loud  {
+  font-size: 4rem;
+}
+
+.fourth-section h4.red  {
+  font-size: 2.75rem;
+}
+
+
+/*FIFTH SECTION */
+
+.fifth-section {
+  color: #fff;
+  background: #fff;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.fifth-section .city {
+  padding: 70px 15px 0;
+}
+
+#city-1 {
+  background: #fff;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/kc.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#city-2 {
+  background: #fff;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/pittsburgh.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#city-3 {
+  background: #fff;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/buffalo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fifth-section .logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.fifth-section h5 {
+  font-size: 2.2rem;
+}
+
+.fifth-section h3 {
+  font-size: 5.5rem;
+}
+
+.fifth-section .teams {
+  padding-top: 30px;
+}
+
+/*SIXTH SECTION */
+
+.sixth-section {
+  color: #fff;
+  background: #fff;
+  position: relative;
+}
+
+  #portlandVideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: black; /* in case the video doesn't fit the whole page*/
+      background-image: /* our video */;
+      background-position: center center;
+      background-size: contain;
+      object-fit: cover; /*cover video background */
+      z-index:3;
+  }
+
+.sixth-section .text-center {
+  padding-top: 100px;
+  z-index: 10;
+}
+
+/*SEVENTH SECTION */
+
+.seventh-section {
+  color: #fff;
+  background: #fff;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(../images/streetcar.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.seventh-section h4 {
+  line-height: 1.4;
+}
+
+/*EIGHTH SECTION */
+
+.eighth-section {
+  color: #fff;
+  background: #fff;
+  padding: 0;
+  background-attachment: fixed;
+  margin-top: -11px;
+}
+
+.eighth-section img {
+  width: 100%;
+}
+
+.eighth-section .slide-title {
+  color: #D12024;
+}
+
+.eighth-section .row {
+  padding: 0 115px;
+}
+
+.eighth-section h4 {
+  font-size: 3.2rem;
+}
+
+.eighth-section .raleway {
+  text-transform: inherit !important;
+  font-weight: 400 !important;
+}
+
+.eighth-section .featured-blurb {
+  text-transform: inherit !important;
+}
+
+.eighth-section #slide1 .content  {
+  padding: 20px;
+  background: #333;
+}
+
+.eighth-section #slide2 .content {
+  padding: 20px;
+  background: #fff;
+}
+
+.eighth-section #slide3 .content {
+  padding: 20px;
+  background: #D12024;
+}
+
+.eighth-section .content h5, .content p {
+  color: #fff;
+}
+
+#slide0 {
+  color: #fff;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/portlandpark.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#slide1 {
+  color: #fff;
+  background: #D12024;
+  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+}
+
+#slide2 {
+  color: #fff;
+  background: #263058;
+  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+}
+
+.eighth-section #slide2 .content h4.loud-oregon {
+  color: #333;
+}
+
+#slide3 {
+  color: #fff;
+  background: #333;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+}
+
+/*HOVERS*/
+
+.backgroundLeft {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/support.jpg) !important;
+}
+
+.backgroundChangeLeft {
+  border-bottom: #fff solid 5px;
+}
+
+.backgroundMiddle {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/baseballseats.jpeg) !important;
+}
+
+.backgroundChangeMiddle {
+  border-bottom: #fff solid 5px;
+}
+
+.backgroundRight {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/baseball.jpg) !important;
+}
+
+.backgroundChangeRight {
+  border-bottom: #fff solid 5px;
+}
+
+.backgroundLeftTwo {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/workers.jpg) !important;
+}
+
+.backgroundChangeLeftTwo {
+  border-bottom: #333 solid 5px;
+}
+
+.backgroundMiddleTwo {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/cash.jpg) !important;
+}
+
+.backgroundChangeMiddleTwo {
+  border-bottom: #333 solid 5px;
+}
+
+.backgroundRightTwo {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/planesky.jpg) !important;
+}
+
+.backgroundChangeRightTwo {
+  border-bottom: #333 solid 5px;
+}
+
+.backgroundLeftThree {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/timbersfans.jpg) !important;
+}
+
+.backgroundChangeLeftThree {
+  border-bottom: #fff solid 5px;
+}
+
+.backgroundMiddleThree {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/portlandskyline-blur.jpg) !important;
+}
+
+.backgroundChangeMiddleThree {
+  border-bottom: #fff solid 5px;
+}
+
+.backgroundRightThree {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/mariners.jpg) !important;
+}
+
+.backgroundChangeRightThree {
+  border-bottom: #fff solid 5px;
+}
+
+/*CAROUSEL*/
+ul[rn-carousel] {
+ overflow: inherit;
+}
+
+.rn-carousel-control {
+  font-size: 4.5rem;
+}
+
+.rn-carousel-control.rn-carousel-control-next {
+  right: 0.2em;
+}
+
+.rn-carousel-control.rn-carousel-control-prev:before {
+    font-family: FontAwesome;
+    content: "\f0a8";
+}
+
+.rn-carousel-control.rn-carousel-control-next:before {
+    font-family: FontAwesome;
+    content: "\f0a9";
+}
+
+.rn-carousel-control.rn-carousel-control-prev {
+  top: 40%;
+  left: 3%;
+}
+
+.rn-carousel-control.rn-carousel-control-next {
+  top: 40%;
+  right: 3%;
+}
+
+.bigControl {
+  font-size: 7rem;
+}
+
+/*NINTH SECTION */
+
+.ninth-section {
+  color: #fff;
+  background-color: #fff;
+  padding: 0;
+  background-attachment: fixed;
+}
+
+.ninth-section img {
+  width: 100%;
+}
+
+.ninth-section h2 {
+  font-size: 6rem;
+}
+
+.ninth-section #main-content h2 {
+  float: left;
+  margin-right: 20px;
+  margin-top: 80px;
+}
+
+.ninth-section p {
+  font-size: 1.8rem;
+  font-weight: 100;
+  padding-top: 90px;
+}
+
+/*TENTH SECTION */
+
+.tenth-section {
+  color: #263058;
+  background-color: #263058;
+  background-image: url(../images/unclesam-red.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -200px -150px;
+  background-attachment: fixed;
+}
+
+.tenth-section h2 {
+  color: #fff;
+}
+
+/*ELEVENTH SECTION */
+
+.eleventh-section {
+  color: #fff;
+  position: relative;
+  background: url(../images/dark.jpg) repeat-x 0 bottom #263058;
+}
+
+.eleventh-section .fa {
+  color: #D12024;
+}
+
+.eleventh-section h4 {
+  margin-top: 5px;
+  color: #333;
+  font-size: 3.7rem;
+}
+
+.eleventh-section .form-content {
+  background: #fff;
+  padding: 30px;
+  color: #333;
+  border-radius: 6px;
+  box-shadow: 2px 2px 1px #fff;
+}
+
+.eleventh-section p.raleway {
+  font-size: 1.2em;
+}
+
+.eleventh-section form {
+  font-family: 'Raleway', sans-serif;
+}
+
+.eleventh-section form label {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #333;
+  font-size: 1.7rem;
+}
+
+.eleventh-section .form-control {
+  font-size: 0.9em;
+  border: 1px solid #e1e1e1;
+}
+
+.eleventh-section .form-control:focus {
+  border-color: #D12024;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(209, 32, 36, 0.65) !important;
+}
+
+.eleventh-section label.soft {
+  font-size: 1em;
+}
+
+/*NEWS*/
+
+.featured-section {
+  height: 400px;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  ),url(../images/manfred.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+  background-attachment: fixed;
+}
+
+.header-news nav {
+  background: #333;
+}
+
+.featured-section .news-featured {
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.news-featured .headline {
+  line-height: 1.4;
+  padding: 120px 50px 50px 50px;
+  width: 65%;
+  margin: 300px 10% 0px;
+}
+
+.news-featured .headline span {
+  background-color: #D12024;
+  color: #fff;
+  display: inline;
+  padding: 0.7rem;
+  font-size: 7rem;
+
+  /* Needs prefixing */
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.news-featured .deck span {
+  font-size: 3.2rem;
+}
+
+.container.item-section {
+  padding: 0;
+  color: #333;
+}
+
+.news-item {
+  background: #fff;
+  padding: 15px;
+  color: #333;
+  border: 1px solid #e1e1e1;
+  border-radius: 6px;
+  box-shadow: 2px 2px 1px #fff;
+  margin-right: 1%;
+  margin-bottom: 1%
+}
+
+.headline {
+  font-family: 'oregonregular', sans-serif;
+}
+
+.col-md-8 h4.headline {
+  font-size: 4.5rem;
+}
+
+.col-md-6 h4.headline {
+  font-size: 4rem;
+}
+
+.deck {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100;
+}
+
+.col-md-8 p.deck {
+  font-size: 2.5rem;
+}
+
+.col-md-6 p.deck {
+  font-size: 2.1rem;
+}
+
+@media (min-width: 992px) {
+.col-md-3.news-item {
+  width: 24%;
+}
+
+.col-md-4.news-item {
+  width: 32.33333333%;
+}
+
+.col-md-6.news-item {
+  width: 49%;
+}
+
+.col-md-8.news-item {
+  width: 65.66666666%;
+}
+
+.news img {
+  width: 100%;
+}

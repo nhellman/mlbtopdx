@@ -1,0 +1,46 @@
+<div ng-controller="TagsCreateCtrl">
+	<div class="backend-container">
+	  <h3 class="heading">Add Tag</h3>
+	  <form ng-submit="addTag()">
+	    <fieldset class="form-group">
+	      <label>Name</label>
+	      <input type="text" class="form-control" ng-model="name" name="name" placeholder="Enter Name">
+	    </fieldset>
+	    <fieldset class="form-group">
+        <label>Image</label>
+        <input type="text" class="form-control" ng-model="image" name="image" placeholder="Enter Image URL">
+        <img ng-src="{{image}}">
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Type</label>
+        <select class="form-control" ng-model="type" name="type">
+          <option value="team">Team</option>
+          <option value="player">Player</option>
+          <option value="league">League</option>
+          <option value="other">Other</option>
+        </select>
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Conference</label>
+        <select class="form-control" ng-model="conference" name="conference">
+          <option value="american">American</option>
+          <option value="national">National</option>
+        </select>
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Division</label>
+        <select class="form-control" ng-model="division" name="division">
+          <option value="aleast">AL East</option>
+          <option value="alcentral">AL Central</option>
+          <option value="alwest">AL West</option>
+          <option value="nleast">NL East</option>
+          <option value="nlcentral">NL Central</option>
+          <option value="nlwest">NL West</option>
+					<option value="none">None</option>
+        </select>
+      </fieldset>
+	    <button type="submit" class="btn btn-default">Submit</button>
+	    <a href="#/categories" class="btn btn-danger">Cancel</a>
+	  </form>
+  </div>
+</div>

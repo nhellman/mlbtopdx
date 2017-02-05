@@ -1,0 +1,128 @@
+<div ng-controller="LogoutCtrl">
+  <a ng-click='logout()' class="btn btn-default">Logout</a>
+</div>
+
+<div class="wrapper backend">
+  <div class="cb__title pb1">
+    <h1 class="mt1">Welcome to the Backend</h1>
+  </div>
+
+	<div ng-controller="ArticlesCtrl">
+	  <div class="grid">
+	    <div class="md-flex text-center">
+	      <div class="w-100">
+          <div class="cb__title mb1 pb1">
+            <h2><a href="/backend/articles">ARTICLES</a></h2>
+          </div>
+	      </div>
+	    </div>
+  	    <div class="md-flex">
+  	      <div class="w-100">
+  	        <input type="search" class="form-input" ng-model="q" placeholder="Find Articles" aria-label="Find Articles">
+  	      </div>
+  	    </div>
+      </div>
+	  <div class="articles">
+	    <div ng-repeat="article in articles.slice().reverse() | limitTo: 5 | filter: q as results ">
+
+        <div class="cb cb3 mb2">
+          <div class="cb__image">
+            <img ng-src={{article.image}}>
+          </div>
+          <div class="cb__text narrow-left text-center mr1">
+            <h4 class="mb1"><a href="/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h4>
+            <p class="mb1">{{article.author}}</p>
+            <p class="mb1"><span ng-bind="article.date | date: 'MM/dd/yyyy'"></span></p>
+            <a class="btn btn-default" href="/articles/edit/{{article._id}}">Edit Article</a>
+          </div>
+        </div>
+	    </div>
+	  </div>
+    <div class="md-flex items-center justify-center">
+      <div class="flex">
+        <a href="/backend/articles" class="btn btn-transparent text-smooth mb4 mt0 pt0">Add Article</a>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div ng-controller="AuthorCtrl">
+	  <div class="grid">
+	    <div class="md-flex text-center">
+	      <div class="w-100">
+          <div class="cb__title mb1 pb1">
+            <h2><a href="/backend/authors">AUTHORS</a></h2>
+          </div>
+	      </div>
+	    </div>
+  	    <div class="md-flex">
+  	      <div class="w-100">
+  	        <input type="search" class="form-input" ng-model="q" placeholder="Find Authors" aria-label="Find Authors">
+  	      </div>
+  	    </div>
+      </div>
+	  <div class="authors">
+	    <div ng-repeat="author in authors.slice().reverse() | limitTo: 5 | filter: q as results ">
+
+        <div class="cb cb3 mb2">
+          <div class="cb__image">
+            <img ng-src={{author.image}}>
+          </div>
+          <div class="cb__text narrow-left text-center mr1">
+            <h4 class="mb1"><a href="/articles/author/{{author.name}}">{{author.name}}</a></h4>
+            <p ng-bind-html="author.bio" class="mb1"></p>
+            <p class="mb1">Joined: <span ng-bind="author.date | date: 'MM/dd/yyyy'"></span></p>
+            <a class="btn btn-default" href="/authors/edit/{{author._id}}">Edit Author</a>
+          </div>
+        </div>
+	    </div>
+	  </div>
+    <div class="md-flex items-center justify-center">
+      <div class="flex">
+        <a href="/backend/authors" class="btn btn-transparent text-smooth mb4 mt0 pt0">Add Author</a>
+      </div>
+    </div>
+  </div>
+
+	<hr>
+
+  <div ng-controller="TagCtrl">
+	  <div class="grid">
+	    <div class="md-flex text-center">
+	      <div class="w-100">
+          <div class="cb__title mb1 pb1">
+            <h2><a href="/backend/tags">TAGS</a></h2>
+          </div>
+	      </div>
+	    </div>
+  	    <div class="md-flex">
+  	      <div class="w-100">
+  	        <input type="search" class="form-input" ng-model="q" placeholder="Find Tags" aria-label="Find Tags">
+  	      </div>
+  	    </div>
+      </div>
+	  <div class="articles">
+	    <div ng-repeat="tag in tags.slice().reverse() | limitTo: 5 | filter: q as results ">
+
+        <div class="cb cb3 mb2">
+          <div class="cb__image">
+            <img ng-src={{tag.image}}>
+          </div>
+          <div class="cb__text narrow-left text-center mr1">
+            <h4 class="mb1"><a href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+            <p class="mb1 text-transform-upper"><b>Conference</b><br> {{tag.conference}}</p>
+            <p class="mb1"><b>Division</b><br> {{tag.division}}</p>
+            <a class="btn btn-default" href="/tags/edit/{{tag._id}}">Edit Tag</a>
+          </div>
+        </div>
+	    </div>
+	  </div>
+    <div class="md-flex items-center justify-center">
+      <div class="flex">
+        <a href="/backend/tags" class="btn btn-transparent text-smooth mb4 mt0 pt0">Add Tag</a>
+      </div>
+    </div>
+  </div>
+
+</div>
