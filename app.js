@@ -12,7 +12,7 @@ var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var db = mongoose.connection;
 
-mongoose.connect('mongodb://localhost/mlb');
+mongoose.connect('mongodb://heroku_mszgc02p:bddbkjp1tkjpt41mgk8no0sj0f@ds143559.mlab.com:43559/heroku_mszgc02p');
 
 var User = require('./models/user.js');
 
