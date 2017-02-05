@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5712f48546696d36d8ecdbca"},"name":"Conan","bio":"\u003cp\u003eThe BEST comedy show host!!!!\u003c/p\u003e","image":"http://www.thewrap.com/wp-content/uploads/2014/05/CONAN-OBRIEN-618.jpg","date":{"$date":"2016-04-17T02:27:17.006Z"},"__v":0}
+{"_id":{"$oid":"5719745378461c5607790ba8"},"name":"Joe Freeman","bio":"\u003cp\u003eJoe Freeman is a reporter for The Oregonian in Portland.\u003c/p\u003e","image":"https://pbs.twimg.com/profile_images/633847610244132864/qjimBdai.jpg","date":{"$date":"2016-04-22T00:46:11.962Z"},"__v":0}

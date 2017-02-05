@@ -1,0 +1,8 @@
+{"_id":{"$oid":"572531ff4199a9f0c733f800"},"name":"feature"}
+{"_id":{"$oid":"5725321b4199a9f0c733f801"},"name":"infographic"}
+{"_id":{"$oid":"572532444199a9f0c733f802"},"name":"podcast"}
+{"_id":{"$oid":"5725324d4199a9f0c733f803"},"name":"breakdown"}
+{"_id":{"$oid":"572532584199a9f0c733f804"},"name":"newsflash"}
+{"_id":{"$oid":"572532644199a9f0c733f805"},"name":"analysis"}
+{"_id":{"$oid":"5725326c4199a9f0c733f806"},"name":"post"}
+{"_id":{"$oid":"572582634199a9f0c733f807"},"name":"video"}

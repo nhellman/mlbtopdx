@@ -1,0 +1,5 @@
+{"_id":{"$oid":"570066569bcec1e4eaf7e818"},"name":"baseball","description":"A wider look at America's past time."}
+{"_id":{"$oid":"570066729bcec1e4eaf7e819"},"name":"mlb","description":"A glimpse at Major League Baseball as a whole."}
+{"_id":{"$oid":"570066929bcec1e4eaf7e81a"},"name":"portland","description":"Everything Rose City – economic developments, population changes and signs Portland is ready for a baseball team."}
+{"_id":{"$oid":"57252f2c4199a9f0c733f7fe"},"name":"expansion","description":"MLB has hinted at adding more teams – and Portland could be a prime spot for one."}
+{"_id":{"$oid":"57252fe04199a9f0c733f7ff"},"name":"relocation","description":"With Tampa Bay, Oakland and other cities growing tired of their teams, Portland will gladly take one of them."}
