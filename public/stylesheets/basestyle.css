@@ -5764,7 +5764,7 @@ footer ul li a {
 }
 
 .bg-off-white {
-  background: #f2ece6
+  background: #ece1d6
 }
 
 .grid--menu {
@@ -7182,4 +7182,21 @@ img.circle {
     left: 0;
     right: 0;
     background: rgba(39, 41, 43, 0.3);
+}
+
+.circle-icon2 {
+    background: #ffc0c0;
+    padding:30px;
+    border-radius: 50%;
+}
+
+.circle-icon {
+    background: #ffc0c0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    padding: 30px;
 }
