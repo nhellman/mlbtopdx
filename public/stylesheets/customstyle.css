@@ -936,3 +936,11 @@ ul[rn-carousel] {
 .news img {
   width: 100%;
 }
+
+.featured_item .grid .grid__item {
+  min-height: 42rem;
+}
+
+.featured_item h1 {
+  font-size: 4.5rem;
+}
