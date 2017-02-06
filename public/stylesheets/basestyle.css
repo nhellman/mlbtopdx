@@ -7161,16 +7161,25 @@ img.circle {
   min-height: 42rem;
 }
 
+.grid .featured_item .grid__content {
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 76rem)
+.grid .featured_item.grid__item {
+    padding: 3rem 4rem;
+}
+
 .featured_item h1 {
   font-size: 4.5rem;
 }
 
 .featured-overlay {
-    z-index: 0;
+    z-index: 1;
     position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(39, 41, 43, 0.7);
+    background: rgba(39, 41, 43, 0.3);
 }
