@@ -937,7 +937,7 @@ ul[rn-carousel] {
   width: 100%;
 }
 
-.featured_item .grid .grid__item {
+.grid .featured_item.grid__item {
   min-height: 42rem;
 }
 
