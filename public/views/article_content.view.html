@@ -24,12 +24,12 @@
 
           <div class="bg-blue more-content">
             <div class="cb__title mb0 pt2 pb1">
-              <h2 class="text-white">More {{article[0].category}} Content</h2>
+              <h2 class="text-white">Related Content</h2>
             </div>
 
               <div class="grid flex flex-wrap wrapper menu__features aftercontent_cards pb4">
 
-                <div class="content-list-item" ng-repeat="articleModule in articleModule.slice().reverse() | limitTo: 3" ng-if="article[0]._id != articleModule._id && article[0].category == articleModule.category">
+                <div class="content-list-item" ng-repeat="articleModule in articleModule.slice().reverse() | limitTo: 3" ng-if="article[0]._id != articleModule._id">
 
                   <div class="card flex" ng-style="{'background-image': 'url('+ articleModule.image + ')'}">
 
@@ -46,15 +46,6 @@
 
               </div>
 
-          </div>
-
-          <hr>
-
-          <div class="comment-box">
-            <h3 class="capped">Comments on <span class="bold">{{article[0].title}}</span>:</h3>
-            <div class="row">
-              <dir-disqus config="disqusConfig"></dir-disqus>
-            </div>
           </div>
 
       </div>
