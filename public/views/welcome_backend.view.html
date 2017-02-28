@@ -12,7 +12,7 @@
 	    <div class="md-flex text-center">
 	      <div class="w-100">
           <div class="cb__title mb1 pb1">
-            <h2><a href="/backend/articles">ARTICLES</a></h2>
+            <h2><a href="#/backend/articles">ARTICLES</a></h2>
           </div>
 	      </div>
 	    </div>
@@ -30,17 +30,17 @@
             <img ng-src={{article.image}}>
           </div>
           <div class="cb__text narrow-left text-center mr1">
-            <h4 class="mb1"><a href="/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h4>
+            <h4 class="mb1"><a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h4>
             <p class="mb1">{{article.author}}</p>
             <p class="mb1"><span ng-bind="article.date | date: 'MM/dd/yyyy'"></span></p>
-            <a class="btn btn-default" href="/articles/edit/{{article._id}}">Edit Article</a>
+            <a class="btn btn-default" href="#/articles/edit/{{article._id}}">Edit Article</a>
           </div>
         </div>
 	    </div>
 	  </div>
     <div class="md-flex items-center justify-center">
       <div class="flex">
-        <a href="/backend/articles" class="btn btn-transparent text-smooth mb4 mt0 pt0">Add Article</a>
+        <a href="#/backend/articles" class="btn btn-transparent text-smooth mb4 mt0 pt0">Add Article</a>
       </div>
     </div>
   </div>
@@ -52,7 +52,7 @@
 	    <div class="md-flex text-center">
 	      <div class="w-100">
           <div class="cb__title mb1 pb1">
-            <h2><a href="/backend/authors">AUTHORS</a></h2>
+            <h2><a href="#/backend/authors">AUTHORS</a></h2>
           </div>
 	      </div>
 	    </div>
@@ -70,17 +70,17 @@
             <img ng-src={{author.image}}>
           </div>
           <div class="cb__text narrow-left text-center mr1">
-            <h4 class="mb1"><a href="/articles/author/{{author.name}}">{{author.name}}</a></h4>
+            <h4 class="mb1"><a href="#/articles/author/{{author.name}}">{{author.name}}</a></h4>
             <p ng-bind-html="author.bio" class="mb1"></p>
             <p class="mb1">Joined: <span ng-bind="author.date | date: 'MM/dd/yyyy'"></span></p>
-            <a class="btn btn-default" href="/authors/edit/{{author._id}}">Edit Author</a>
+            <a class="btn btn-default" href="#/authors/edit/{{author._id}}">Edit Author</a>
           </div>
         </div>
 	    </div>
 	  </div>
     <div class="md-flex items-center justify-center">
       <div class="flex">
-        <a href="/backend/authors" class="btn btn-transparent text-smooth mb4 mt0 pt0">Add Author</a>
+        <a href="#/backend/authors" class="btn btn-transparent text-smooth mb4 mt0 pt0">Add Author</a>
       </div>
     </div>
   </div>
@@ -92,7 +92,7 @@
 	    <div class="md-flex text-center">
 	      <div class="w-100">
           <div class="cb__title mb1 pb1">
-            <h2><a href="/backend/tags">TAGS</a></h2>
+            <h2><a href="#/backend/tags">TAGS</a></h2>
           </div>
 	      </div>
 	    </div>
@@ -110,17 +110,17 @@
             <img ng-src={{tag.image}}>
           </div>
           <div class="cb__text narrow-left text-center mr1">
-            <h4 class="mb1"><a href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+            <h4 class="mb1"><a href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
             <p class="mb1 text-transform-upper"><b>Conference</b><br> {{tag.conference}}</p>
             <p class="mb1"><b>Division</b><br> {{tag.division}}</p>
-            <a class="btn btn-default" href="/tags/edit/{{tag._id}}">Edit Tag</a>
+            <a class="btn btn-default" href="#/tags/edit/{{tag._id}}">Edit Tag</a>
           </div>
         </div>
 	    </div>
 	  </div>
     <div class="md-flex items-center justify-center">
       <div class="flex">
-        <a href="/backend/tags" class="btn btn-transparent text-smooth mb4 mt0 pt0">Add Tag</a>
+        <a href="#/backend/tags" class="btn btn-transparent text-smooth mb4 mt0 pt0">Add Tag</a>
       </div>
     </div>
   </div>

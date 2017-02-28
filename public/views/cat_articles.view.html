@@ -24,7 +24,7 @@
             <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
               <div class="grid__content">
                 <p class="h6 category-marker">{{article.category}}</p>
-                <a ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
+                <a ng-href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
                 <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
               </div>
             </div>
