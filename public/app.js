@@ -1,4 +1,4 @@
-var app = angular.module('mlb', ['ngRoute', 'textAngular', 'oi.select', 'ngResource', 'angularUtils.directives.dirDisqus', 'angular-parallax', 'angular-scroll-animate', 'counter', 'angular-carousel', 'smoothScroll']);
+var app = angular.module('mlb', ['ngRoute', 'textAngular', 'ngResource', 'counter', 'angular-carousel']);
 
 //FILTERS
 
