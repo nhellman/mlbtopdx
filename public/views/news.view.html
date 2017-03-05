@@ -1,143 +1,116 @@
 <div ng-controller="HomeCtrl">
 
-  <main class="news">
-    <div class="carousel carousel--food slider js_slider">
-      <div class="frame js_frame">
-        <ul rn-carousel rn-carousel-auto-slide="5" rn-carousel-easing class="slides js_slides image">
-          <li ng-repeat="article in articles.slice(0, articles.length).reverse() | limitTo: 5" class="js_slide">
-            <div class="slide-background-image" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
-            <div class="slide-content">
-              <h3 class="category-marker">{{article.category}}</h3>
-              <a ng-href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
-              <div class="slide-content__description ">
-                {{article.blurb}}
+  <div ng-repeat="article in articles.slice().reverse() | limitTo: 1">
+    <header id="gtco-header" class="gtco-cover" role="banner" ng-style="{'background-image': 'linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('+ article.image + ')'}" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 text-left">
+            <div class="display-t">
+              <div class="display-tc" data-animate-effect="fadeInUp">
+                <span class="date-post"><time am-time-ago="article.date"></time></span>
+                <h1 class="mb30"><a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h1>
+                <p><a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="text-link">Read More</a></p>
               </div>
-              <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="grid wrapper bg-off-white">
+    </header>
+  </div>
+  <div id="gtco-main">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-12">
+					<ul id="gtco-post-list">
+						<li class="full entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 1).reverse() | limitTo: 1">
+							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
+								<div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+								<div class="entry-desc">
+									<h3>{{article.title}}</h3>
+									<p>{{article.blurb}}</p>
+                  <p><a href="#/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
+								</div>
+							</a>
+							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+						</li>
 
-      <div class="md-flex">
+            <li class="two-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 2).reverse() | limitTo: 1">
+							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
+								<div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+								<div class="entry-desc">
+									<h3>{{article.title}}</h3>
+									<p>{{article.blurb}}</p>
+                  <p><a href="#/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
+								</div>
+							</a>
+							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+						</li>
 
-        <!-- SECOND LEVEL | ONE HALF AND TWO QUARTERS -->
-        <div class="flex w-md-50 ">
-          <div ng-repeat="article in articles.slice(0, articles.length - 5).reverse() | limitTo: 1">
-            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
-              <div class="grid__content">
-                <p class="h6 category-marker">{{article.category}}</p>
-                <a ng-href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
-                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
+            <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 3).reverse() | limitTo: 1">
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
+                <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+                <div class="entry-desc">
+                  <h3>{{article.title}}</h3>
+                  <p>{{article.blurb}}</p>
+                  <p><a href="#/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
+                </div>
+              </a>
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+            </li>
 
-        <div class="flex w-md-50 ">
-          <div ng-repeat="article in articles.slice(0, articles.length - 6).reverse() | limitTo: 1">
-            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
-              <div class="grid__content">
-                <p class="h6 category-marker">{{article.category}}</p>
-                <a ng-href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
-                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
+            <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 4).reverse() | limitTo: 3">
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
+                <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+                <div class="entry-desc">
+                  <h3>{{article.title}}</h3>
+                  <p>{{article.blurb}}</p>
+                  <p><a href="#/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
+                </div>
+              </a>
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+            </li>
 
-      </div>
-
-      <!-- THIRD LEVEL | THREE THIRDS -->
-      <div class="md-flex">
-
-        <div class="flex w-md-33">
-          <div ng-repeat="article in articles.slice(0, articles.length - 7).reverse() | limitTo: 1">
-            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
-              <div class="grid__content">
-                <p class="h6 category-marker">{{article.category}}</p>
-                <a ng-href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
-                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex w-md-33">
-          <div ng-repeat="article in articles.slice(0, articles.length - 8).reverse() | limitTo: 1">
-            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
-              <div class="grid__content">
-                <p class="h6 category-marker">{{article.category}}</p>
-                <a ng-href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
-                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex w-md-33">
-          <div ng-repeat="article in articles.slice(0, articles.length - 9).reverse() | limitTo: 1">
-            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
-              <div class="grid__content">
-                <p class="h6 category-marker">{{article.category}}</p>
-                <a ng-href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
-                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- FOURTH LEVEL | THREE THIRDS -->
-      <div class="md-flex">
-
-        <div class="flex w-md-33">
-          <div ng-repeat="article in articles.slice(0, articles.length - 10).reverse() | limitTo: 1">
-            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
-              <div class="grid__content">
-                <p class="h6 category-marker">{{article.category}}</p>
-                <a ng-href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
-                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex w-md-33">
-          <div ng-repeat="article in articles.slice(0, articles.length - 11).reverse() | limitTo: 1">
-            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
-              <div class="grid__content">
-                <p class="h6 category-marker">{{article.category}}</p>
-                <a ng-href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
-                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex w-md-33">
-          <div ng-repeat="article in articles.slice(0, articles.length - 12).reverse() | limitTo: 1">
-            <div class="w-100 flex items-end pt4 text-white grid__item gradient-after" ng-style="{'background-image': 'url('+ article.image + ')'}">
-              <div class="grid__content">
-                <p class="h6 category-marker">{{article.category}}</p>
-                <a ng-href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><h2>{{article.title}}</h2></a>
-                <p class="news-date pt1"><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      </div>
-
-    </div>
+            <li class="one-half entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 7).reverse() | limitTo: 2">
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
+                <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+                <div class="entry-desc">
+                  <h3>{{article.title}}</h3>
+                  <p>{{article.blurb}}</p>
+                  <p><a href="#/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
+                </div>
+              </a>
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+            </li>
 
 
+            <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 9).reverse() | limitTo: 1">
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
+                <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+                <div class="entry-desc">
+                  <h3>{{article.title}}</h3>
+                  <p>{{article.blurb}}</p>
+                  <p><a href="#/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
+                </div>
+              </a>
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+            </li>
 
-  </main>
+            <li class="two-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 10).reverse() | limitTo: 1">
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
+                <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+                <div class="entry-desc">
+                  <h3>{{article.title}}</h3>
+                  <p>{{article.blurb}}</p>
+                </div>
+              </a>
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+            </li>
 
-  </body>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </div>
