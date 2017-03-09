@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-md-7 text-left">
             <div class="display-t">
-              <div class="display-tc" data-animate-effect="fadeInUp">
+              <div class="display-tc">
                 <span class="date-post"><time am-time-ago="article.date"></time></span>
                 <h1 class="mb30"><a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h1>
                 <p><a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="text-link">Read More</a></p>
@@ -23,7 +23,7 @@
 			<div class="row row-pb-md">
 				<div class="col-md-12">
 					<ul id="gtco-post-list">
-						<li class="full entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 1).reverse() | limitTo: 1">
+						<li class="full entry"  ng-repeat="article in articles.slice(0, articles.length - 1).reverse() | limitTo: 1">
 							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
 								<div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
 								<div class="entry-desc">
@@ -35,7 +35,7 @@
 							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
 						</li>
 
-            <li class="two-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 2).reverse() | limitTo: 1">
+            <li class="two-third entry"  ng-repeat="article in articles.slice(0, articles.length - 2).reverse() | limitTo: 1">
 							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
 								<div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
 								<div class="entry-desc">
@@ -47,7 +47,7 @@
 							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
 						</li>
 
-            <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 3).reverse() | limitTo: 1">
+            <li class="one-third entry"  ng-repeat="article in articles.slice(0, articles.length - 3).reverse() | limitTo: 1">
               <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
@@ -59,7 +59,7 @@
               <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
-            <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 4).reverse() | limitTo: 3">
+            <li class="one-third entry"  ng-repeat="article in articles.slice(0, articles.length - 4).reverse() | limitTo: 3">
               <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
@@ -71,7 +71,7 @@
               <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
-            <li class="one-half entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 7).reverse() | limitTo: 2">
+            <li class="one-half entry"  ng-repeat="article in articles.slice(0, articles.length - 7).reverse() | limitTo: 2">
               <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
@@ -84,7 +84,7 @@
             </li>
 
 
-            <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 9).reverse() | limitTo: 1">
+            <li class="one-third entry"  ng-repeat="article in articles.slice(0, articles.length - 9).reverse() | limitTo: 1">
               <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
@@ -96,7 +96,7 @@
               <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
-            <li class="two-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 10).reverse() | limitTo: 1">
+            <li class="two-third entry"  ng-repeat="article in articles.slice(0, articles.length - 10).reverse() | limitTo: 1">
               <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
