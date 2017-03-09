@@ -1,4 +1,4 @@
-var app = angular.module('mlb', ['ngRoute', 'textAngular', 'ngResource', 'counter', 'angular-carousel', 'ngAnimate', 'oi.select', 'zumba.angular-waypoints']);
+var app = angular.module('mlb', ['ngRoute', 'textAngular', 'ngResource', 'counter', 'angular-carousel', 'ngAnimate', 'oi.select', 'angularMoment', 'zumba.angular-waypoints']);
 
 //FILTERS
 
