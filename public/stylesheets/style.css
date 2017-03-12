@@ -322,6 +322,8 @@ img.flip {
 
 .container-main {
   margin-top: 60px;
+  padding: 0px !important;
+  width: 100% !important;
 }
 
 .main {
