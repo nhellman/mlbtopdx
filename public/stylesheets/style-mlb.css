@@ -991,7 +991,7 @@ figure figcaption {
 #gtco-team,
 #gtco-contact,
 #gtco-footer {
-  padding: 7em 0;
+  padding: 2em 0;
   clear: both;
 }
 @media screen and (max-width: 768px) {
@@ -1005,7 +1005,7 @@ figure figcaption {
   #gtco-team,
   #gtco-contact,
   #gtco-footer {
-    padding: 3em 0;
+    padding: 1.5em 0;
   }
 }
 
@@ -2220,7 +2220,6 @@ iframe.ta-insert-video {
 }
 
 .container-main {
-  margin-top: 60px;
   padding: 0px !important;
   width: 100% !important;
 }
