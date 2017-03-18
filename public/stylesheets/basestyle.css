@@ -5766,6 +5766,9 @@ footer ul li a {
 .bg-off-white {
   background: #ece1d6
 }
+.bg-off-white h2 {
+  color: #000 !important;
+}
 
 .grid--menu {
   padding-bottom: 2em
